@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang=en-US>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Final Grade Calculator</title>
+</head>
+
+<body>
+    <h1>Grade Calculator</h1>
+    <button onclick="Grade_Function()">Calculate Your Final Grade</button>
+
+    <p id="prompt"></p>
+
+    <script type="text/javascript">
+        //Javascript program to provide
+        //calculation of final grade when provided with the final exam grade
+
+        //Makes a function that runs when you hit the "Calculate Your Final Grade" button
+        function Grade_Function() {
+            var txt;
+
+            //Sets the variable grades received over the semester/year prior to the final exam.
+            var other_grades = 85;
+            //Pop-up Box that allows for user to input final exam grade. Also sets the variable for the final exam grade.
+            var final_exam = prompt("What did you score on the final exam? Enter 90 for 90%");
+            //Sets the variable for final course grade by using the equation
+            var final_grade = ((other_grades * 75) + (final_exam * 25)) / 100;
+            //Displays the final exam grade as well as the final course grade
+            document.getElementById("prompt").innerHTML = "You earned " + final_exam + "% on the final exam." + "<br>" +
+                "Your final course grade will be " + final_grade + "%.";
+        }
+
+    </script>
+</body>
+
+</html>
